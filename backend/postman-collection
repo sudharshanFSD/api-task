@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "6735fb36-843f-4542-a04f-efeedf22e394",
+		"name": "Hall-Booking-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35282558"
+	},
+	"item": [
+		{
+			"name": "Create Room",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n            \"seats\": 3,\r\n            \"amenities\": [\"TV\",\"Doublebed\",\"AC\"] ,           \r\n            \"pricePerHour\": 2500\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hall-booking-2-53in.onrender.com/rooms",
+					"protocol": "https",
+					"host": [
+						"hall-booking-2-53in",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"rooms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Booking Room",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerName\": \"Pooorani\",\r\n    \"date\": \"06-04-2024\",\r\n    \"startTime\": \"14:00\",\r\n    \"endTime\": \"20:00\",\r\n    \"roomId\": 3\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hall-booking-2-53in.onrender.com/bookings",
+					"protocol": "https",
+					"host": [
+						"hall-booking-2-53in",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"bookings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List All Customer with BookingData",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://hall-booking-2-53in.onrender.com/customers",
+					"protocol": "https",
+					"host": [
+						"hall-booking-2-53in",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List how many times a customer has booked the room",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://hall-booking-2-53in.onrender.com/customer/Guest",
+					"protocol": "https",
+					"host": [
+						"hall-booking-2-53in",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"customer",
+						"Guest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List all rooms with booked data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://hall-booking-2-53in.onrender.com/rooms",
+					"protocol": "https",
+					"host": [
+						"hall-booking-2-53in",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"rooms"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
